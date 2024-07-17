@@ -1,4 +1,4 @@
 .env
 psql/pgadmin/*
-*__pycache__
-*__pytest__
+*__pycache__*
+.pytest_cache
