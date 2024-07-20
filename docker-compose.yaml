@@ -31,7 +31,7 @@ services:
       PGADMIN_DEFAULT_PASSWORD: password
 
   spark-master:
-    image: bitnami/spark:latest
+    build: ./spark.dockerfile
     command: bin/spark-class org.apache.spark.deploy.master.Master
     volumes:
       - ./spark:/spark
@@ -40,7 +40,7 @@ services:
       - 7077:7077
 
   spark-worker-1:
-    image: bitnami/spark:latest
+    build: ./spark.dockerfile
     command: bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
     volumes:
       - ./spark:/spark
@@ -53,7 +53,7 @@ services:
       SPARK_MASTER_URL: spark://spark-master:7077
 
   spark-worker-2:
-    image: bitnami/spark:latest
+    build: ./spark.dockerfile
     command: bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
     volumes:
       - ./spark:/spark
