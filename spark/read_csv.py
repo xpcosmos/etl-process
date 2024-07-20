@@ -17,10 +17,10 @@ print(df.show(5))
 
 
 # Saving data to a JDBC source
-df.write \
-    .format("jdbc") \
-    .option("url", "jdbc:postgresql:dbserver") \
-    .option("dbtable", "schema.tablename") \
-    .option("user", "username") \
-    .option("password", "password") \
-    .save()
+# df.write \
+#     .format("jdbc") \
+#     .option("url", "jdbc:postgresql:dbserver") \
+#     .option("dbtable", "schema.tablename") \
+#     .option("user", "username") \
+#     .option("password", "password") \
+#     .save()

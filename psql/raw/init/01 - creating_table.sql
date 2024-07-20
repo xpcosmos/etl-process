@@ -1,0 +1,22 @@
+create table animais (
+    "pk_id_animal" serial primary key,
+    "Reino" varchar null, 
+    "Filo" varchar null,
+    "Classe" varchar null,
+    "Ordem" varchar null,
+    "Família" varchar null,
+    "Gênero" varchar null,
+    "Nome Científico" varchar null,
+    "Autor" varchar null,
+    "Nome Comum" varchar null,
+    "Grupo" varchar null,
+    "Categoria" varchar null,
+    "Consta em Lista Nacional Oficial" varchar null,
+    "Estado" varchar null,
+    "Região" varchar null,
+    "Bioma Hidrográfica" text null, 
+    "Bacia" varchar null,
+    "Unidade de Conservação Federal" varchar null,
+    "Unidade de Conservação Estadual" varchar null,
+    "RPPN" varchar null
+);

@@ -2,3 +2,5 @@
 psql/pgadmin/*
 *__pycache__*
 .pytest_cache
+*example.yml
+*.ipynb
