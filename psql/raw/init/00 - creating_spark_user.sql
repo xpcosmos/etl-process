@@ -1,2 +1,2 @@
 
-CREATE USER "spark" WITH PASSWORD 'sparkpassword';
+CREATE USER spark WITH PASSWORD 'sparkpassword';

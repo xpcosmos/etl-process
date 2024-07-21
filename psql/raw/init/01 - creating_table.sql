@@ -1,5 +1,5 @@
-create table animais (
-    "pk_id_animal" serial primary key,
+create table animals (
+    "pk_animal_id" serial not null,
     "Reino" varchar null, 
     "Filo" varchar null,
     "Classe" varchar null,
@@ -14,9 +14,10 @@ create table animais (
     "Consta em Lista Nacional Oficial" varchar null,
     "Estado" varchar null,
     "Região" varchar null,
-    "Bioma Hidrográfica" text null, 
-    "Bacia" varchar null,
+    "Bioma" varchar null, 
+    "Bacia Hidrográfica" text null,
     "Unidade de Conservação Federal" varchar null,
     "Unidade de Conservação Estadual" varchar null,
     "RPPN" varchar null
 );
+

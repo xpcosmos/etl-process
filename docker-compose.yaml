@@ -35,6 +35,8 @@ services:
     command: bin/spark-class org.apache.spark.deploy.master.Master
     volumes:
       - ./spark:/spark
+    networks:
+      - etl-project
     ports:
       - 9090:8080
       - 7077:7077
@@ -46,6 +48,8 @@ services:
       - ./spark:/spark
     depends_on:
       - spark-master
+    networks:
+      - etl-project
     environment:
       SPARK_MODE: worker
       SPARK_WORKER_CORES: 2
@@ -55,6 +59,8 @@ services:
   spark-worker-2:
     build: ./spark.dockerfile
     command: bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
+    networks:
+      - etl-project
     volumes:
       - ./spark:/spark
     depends_on:
